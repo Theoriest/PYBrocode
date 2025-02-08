@@ -10,7 +10,7 @@ after = [] # to store values at final stage when testing
 weights = np.array([-1230.0,-30.0,300.0])
 targets = [1,1,0,0]
 alpha = 0.01 #learning rate
-epochs  = 10 #number of iterations
+epochs  = 9#number of iterations
 
 
 # prepare data for entry into neuron
@@ -36,6 +36,7 @@ def train_neuron(data, weights, targets, learning_rate, epochs):
 
                 # update weights using gradient descent
                 weights += learning_rate * error * data[i]
+                print (weights)
                        
 
             # print weights and loss at intervals
